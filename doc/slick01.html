@@ -5,221 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slick01 - 신세계 slide</title>
+    <title>slick01 - 메인비주얼 슬라이드 배경으로 만들기</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/slick.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
-
-
-        .font_mj {
-            font-family: 'Noto Serif KR', serif;
+        .itm {
+            height: 600px;
         }
 
-        .Art {
-            padding: 200px 0 100px 0;
-            overflow: hidden;
+        .itm01 {
+            background: url(../img/main_visual01.jpg)no-repeat center center / cover;
         }
 
-        .Art h2 {
-            font-size: 40px;
-            font-weight: 600;
-            text-align: center;
-            margin: 0 0 50px 0;
+        .itm02 {
+            background: url(../img/main_visual02.jpg)no-repeat center center / cover;
         }
 
-        .Art .inner {
-            width: 1200px;
-            height: 450px;
+        .itm03 {
+            background: url(../img/main_visual03.jpg)no-repeat center center / cover;
         }
 
-        .Art .left_tab {
+        .slick01 {
+            position: relative;
+        }
+
+        .slogan {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 1200px;
+            z-index: 999;
 
         }
 
-        .Art .left_tab .itm {
-            display: none;
+        .slogan h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            color: #fff;
+            text-shadow: 0 0 1px #000;
+            /*  text-shadow: 1px 1px 0 #000,
+                2px 2px 0 #000,
+                3px 3px 0 #000,
+                4px 4px 0 #000,
+                5px 5px 0 #000,
+                6px 6px 0 #000,
+                7px 7px 0 #000, */
         }
 
-        .Art .left_tab .itm.on {
-            display: block;
+        .slick-list,
+        .slick-track {
+            transition-delay: 0.02s;
         }
 
-        .left_tab span {
-            display: block;
-            font-size: 14px;
+
+        .slogan p {
+            font-size: 15px;
             font-weight: 300;
-            margin: 0 0 30px 0;
-            color: #ffc77e;
-        }
-
-        .left_tab .tit {
-            font-size: 30px;
-            font-weight: 600;
-            font-family: 'Noto Serif KR', serif;
-            margin: 0 0 30px 0;
-            color: #fff;
-            line-height: 40px;
-        }
-
-        .Art .left_tab a {
-            display: inline-block;
-            border: 1px solid #fff;
-            color: #fff;
-            padding: 8px 15px 7px 15px;
-            font-size: 12px;
-        }
-
-        .Art .art_content_wrap {
-            position: relative;
-        }
-
-        .Art .right_slide {
-            position: absolute;
-            top: 60px;
-            right: -150px;
-            width: 1200px;
-        }
-
-        .Art .right_slide figure {
-            padding: 0 15px;
-
-        }
-
-        .arrows {
-            color: #fff;
-        }
-
-        .arrows_num {
             color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <section class="Art">
-        <h2 class="font_mj">Art &amp; Culture</h2>
-        <div class="art_content_wrap">
-            <div class="inner">
-                <div class="left_tab">
-                    <div class="itm on">
-                        <span>SHINSEGAE GALLERY</span>
-                        <div class="tit">
-                            대구신세계 <br />
-                            줍줍_사적인 채집
-                        </div>
-                        <a href="">
-                            VIEW MORE
-                        </a>
-                    </div>
-                    <div class="itm">
-                        <span>SHINSEGAE GALLERY</span>
-                        <div class="tit">
-                            광주신세계<br />
-                            연말기획전 <Pictures>
-                        </div>
-                        <a href="">
-                            VIEW MORE
-                        </a>
-                    </div>
-                    <div class="itm ">
-                        <span>SHINSEGAE GALLERY</span>
-                        <div class="tit">
-                            대전신세계 Art & Science<br />
-                            정은혜 개인전: 내가 그리는 너
-
-                        </div>
-                        <a href="">
-                            VIEW MORE
-                        </a>
-                    </div>
-                    <div class="itm ">
-                        <span>SHINSEGAE GALLERY</span>
-                        <div class="tit">
-
-                            본점<br />
-                            마이큐 MY Q _ <br />
-                            영원한 날들 EVERYDAY
-                        </div>
-                        <a href="">
-                            VIEW MORE
-                        </a>
-                    </div>
-                    <div class="itm ">
-                        <span>SHINSEGAE GALLERY</span>
-                        <div class="tit">
-                            신세계 아카데미<br />
-                            겨울학기 수강회원 모집
-                        </div>
-                        <a href="">
-                            VIEW MORE
-                        </a>
-                    </div>
-                </div>
-                <div class="arrows">
-                    <i class="xi-angle-left"></i>
-                    <i class="xi-angle-right"></i>
-                </div>
-                <div class="arrows_num">
-                    1 / 5
-                </div>
-                <div class="right_slide">
-                    <figure>
-                        <img src="../img/art01.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../img/art02.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../img/art03.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../img/art04.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../img/art05.jpg" alt="">
-                    </figure>
-                </div>
-            </div>
+    <section class="slick01">
+        <div class="slogan">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque reiciendis vero dignissimos.</p>
         </div>
+
+        <div class="mainSlide">
+            <div class="itm itm01"></div>
+            <div class="itm itm02"></div>
+            <div class="itm itm03"></div>
+        </div>
+
     </section>
     <script>
         $(function () {
 
+            $('.mainSlide').slick({
 
-            var bgColor = ['#207844', '#41437b', '#9b3440', '#844141', '#7f7f7f'];
-            $('.Art .inner').css({ background: bgColor[0] })
-
-            $('.right_slide').on('init afterChange', function (e, s, c) {
-                console.log(c);
-
-                $('.Art .left_tab .itm').eq(c).addClass('on').siblings().removeClass('on');
-
-                $('.Art .inner').css({ background: bgColor[c] })
-                $('.arrows_num').text((c ? c + 1 : 1) + ' / ' + bgColor.length)
             });
-
-            $('.right_slide').slick({
-                slidesToShow: 2,
-                arrows: false,
-                autoPlay: true,
-            });
-
-            $('.arrows i:nth-child(1)').on('click', function () {
-                $('.right_slide').slick('slickPrev');
-            })
-
-            $('.arrows i:nth-child(2)').on('click', function () {
-                $('.right_slide').slick('slickNext');
-            })
 
         })
     </script>
